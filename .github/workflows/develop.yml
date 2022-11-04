@@ -19,7 +19,7 @@ jobs:
         run: npm install
 
       - name: build
-        run: npm run build
+        run: CI=false npm run build
 
       - name: deploy
         run: npm deploy -p --auth ${{secrets.AUTHTOKENQA}} --site${{secrets.SITEID}} 
