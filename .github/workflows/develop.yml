@@ -18,6 +18,12 @@ jobs:
       - name: Install Dependencies
         run: npm install
 
+      - name: build
+        run: npm build
+
+      - name: deploy
+        run: npm deploy -p --auth ${{secrets.AUTHTOKENQA}} --site${{secrets.SITEID}} 
+
       - name: Test Lint
         run: npm run lint
 
