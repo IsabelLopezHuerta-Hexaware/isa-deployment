@@ -8,7 +8,7 @@ on:
 
 jobs:
   test-code:
-    enviroment:
+    environment:
       name: QA
     runs-on: ubuntu-latest
     steps:
