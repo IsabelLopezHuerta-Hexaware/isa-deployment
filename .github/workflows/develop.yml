@@ -8,6 +8,8 @@ on:
 
 jobs:
   test-code:
+    enviroment:
+      name: QA
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
@@ -24,7 +26,7 @@ jobs:
       - name: Test coverage
         run: npm run test
 
-      - name:  homepage
+      - name: homepage
         run: npm run homepage
 
       - name: build
